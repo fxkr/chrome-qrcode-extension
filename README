@@ -1,0 +1,11 @@
+A Google Chrome extension that shows the current URL as a QR code.
+
+I often use this to quickly copy a URL to my smartphone.
+
+It uses Kazuhiko Arases javascript library (http://www.d-project.com/) to
+draw the QR codes instead of relying on some third-party web API (like
+all of the other extensions I looked at. Wtf?).
+
+Author: Felix Kaiser <felix.kaiser@fxkr.net>
+License: MIT (see LICENSE)
+
