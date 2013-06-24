@@ -1,0 +1,31 @@
+body {
+  overflow-x: hidden;
+  min-width: 180px;
+}
+
+#qr {
+  margin: 5px;
+  border: 2px solid black;
+  vertical-align: middle;
+  background-color: red;
+  color: red;
+}
+
+#textbox {
+  width: 100%;
+  border: 1px solid silver;
+}
+
+.center {
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#close {
+  font: bold 18px sans-serif;
+  text-align: right;
+  cursor: pointer;
+
+  float: right;
+}
+
