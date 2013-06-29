@@ -6,6 +6,18 @@ It uses Kazuhiko Arases javascript library (http://www.d-project.com/) to
 draw the QR codes instead of relying on some third-party web API (like
 all of the other extensions I looked at. Wtf?).
 
+Installing (for developers):
+
+    * Clone the repository somehwere.
+    * Go to chrome://extensions
+    * Make sure the "Developer mode" checkbox is on
+    * Click "Load unpacked extension"
+
+Building:
+
+    gem install crxmake
+    ./pack.rb
+
 Author: Felix Kaiser <felix.kaiser@fxkr.net>
 License: MIT (see LICENSE)
 
