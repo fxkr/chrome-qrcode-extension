@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   chrome.tabs.getSelected(null, function(tab) {
     document.getElementById("textbox").value = tab.url;
+    document.getElementById("textbox").select();
     updateImage();
   });
 });
