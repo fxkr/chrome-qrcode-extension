@@ -40,6 +40,10 @@ document.addEventListener("DOMContentLoaded", function () {
     updateImage();
   };
 
+  document.getElementById("textbox").onclick = function() {
+    this.select();
+  };
+
   chrome.tabs.getSelected(null, function(tab) {
     document.getElementById("textbox").value = tab.url;
     document.getElementById("textbox").select();
