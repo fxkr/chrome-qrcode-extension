@@ -40,6 +40,10 @@ document.addEventListener("DOMContentLoaded", function () {
     updateImage();
   };
 
+  document.getElementById("textbox").onkeyup = function() {
+    updateImage();
+  };
+
   document.getElementById("textbox").onclick = function() {
     this.select();
   };
