@@ -1,7 +1,7 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
   var qr_cellsize = 8;
   var qr_margin = 2 * qr_cellsize;
-  var qr_levels = ["M", "L"]
+  var qr_levels = ["M", "L"];
 
   var createImage = function(payload) {
     for (var levelIndex in qr_levels) {
@@ -23,25 +23,34 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   var updateImage = function() {
-    payload = document.getElementById('textbox').value;
-    document.getElementById('insert-qrcode-here').innerHTML =
+    payload = document.getElementById("textbox").value;
+    document.getElementById("insert-qrcode-here").innerHTML =
       createImage(payload) || "Error. URL too long?";
-  }
+  };
 
   var strStartsWith = function(string, prefix) {
     return !string.indexOf(prefix);
-  }
+  };
 
   document.getElementById("close").onclick = function() {
     window.close();
-  }
+  };
 
   document.getElementById("textbox").onchange = function() {
     updateImage();
-  }
+  };
+
+  document.getElementById("textbox").onkeyup = function() {
+    updateImage();
+  };
+
+  document.getElementById("textbox").onclick = function() {
+    this.select();
+  };
 
   chrome.tabs.getSelected(null, function(tab) {
-    document.getElementById('textbox').value = tab.url;
+    document.getElementById("textbox").value = tab.url;
+    document.getElementById("textbox").select();
     updateImage();
   });
 });
