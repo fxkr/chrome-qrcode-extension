@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
   var qr_cellsize = 8;
   var qr_margin = 2 * qr_cellsize;
   var qr_levels = ["M", "L"]
@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   var updateImage = function() {
-    payload = document.getElementById('textbox').value;
-    document.getElementById('insert-qrcode-here').innerHTML =
+    payload = document.getElementById("textbox").value;
+    document.getElementById("insert-qrcode-here").innerHTML =
       createImage(payload) || "Error. URL too long?";
   }
 
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   chrome.tabs.getSelected(null, function(tab) {
-    document.getElementById('textbox').value = tab.url;
+    document.getElementById("textbox").value = tab.url;
     updateImage();
   });
 });
