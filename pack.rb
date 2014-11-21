@@ -8,7 +8,7 @@ CrxMake.make(
   :pkey   => "chrome-qrcode.pem",
   :crx_output => "chrome-qrcode.crx",
   :verbose => true,
-  :ignorefile => /^\.|\.crx$|\.pem$/,
+  :ignorefile => /^((?!(icon-.*\.png|manifest\.json|.*\.(css|html|js))).)*$/,
   :ignoredir => /^\./
 )
 
@@ -19,7 +19,7 @@ CrxMake.zip(
   :pkey   => "chrome-qrcode.pem",
   :zip_output => "chrome-qrcode.zip",
   :verbose => true,
-  :ignorefile => /^\.|\.crx$|\.pem$/,
+  :ignorefile => /^((?!(icon-.*\.png|manifest\.json|.*\.(css|html|js))).)*$/,
   :ignoredir => /^\./
 )
 
