@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
 
-  "name": "QR code",
+  "name": "QR-Code",
   "description": "Show a QR-Code for the current URL (without relying on some third-party API).",
   "version": "0.1.0",
   "homepage_url": "https://github.com/fxkr/chrome-qrcode-extension",
