@@ -12,3 +12,14 @@ CrxMake.make(
   :ignoredir => /^\./
 )
 
+exit if !ARGV.include? '--zip'
+
+CrxMake.zip(
+  :ex_dir => ".",
+  :pkey   => "chrome-qrcode.pem",
+  :zip_output => "chrome-qrcode.zip",
+  :verbose => true,
+  :ignorefile => /^\.|\.crx$|\.pem$/,
+  :ignoredir => /^\./
+)
+
