@@ -1,11 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
-  var qr_cellsize = 8;
-  var qr_margin = 2 * qr_cellsize;
+
+  // Chrome has a hardcoded popup window size limit of 800x600
+  var max_window_height = 600;
+  var max_qrcode_height = max_window_height - 75; // Reserve "some" space for UI
+
   var qr_levels = ["M", "L"];
+  var qr_modules_by_version = {
+    1: 21, 2: 25, 3: 29, 4: 33, 5: 37,
+    6: 41, 7: 45, 8: 49, 9: 53, 10: 57
+  }
 
   var createImage = function(payload) {
+    var qr_margin = 4;
+
     for (var levelIndex in qr_levels) {
       for (var typeNum = 1; typeNum <= 10; typeNum++) {
+        var qr_cellsize = Math.floor(max_qrcode_height / qr_modules_by_version[typeNum]);
         try {
           var qr = qrcode(typeNum, qr_levels[levelIndex]);
           qr.addData(payload);
