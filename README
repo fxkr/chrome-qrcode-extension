@@ -1,5 +1,7 @@
 A Google Chrome extension that shows the current URL as a QR code.
 
+Available in Google Web Store: https://chrome.google.com/webstore/detail/qr-code/leicjbimaiecjfljbeikdailcmaadlml
+
 I often use this to quickly copy a URL to my smartphone.
 
 It uses Kazuhiko Arases javascript library (http://www.d-project.com/) to
