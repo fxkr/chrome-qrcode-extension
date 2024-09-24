@@ -3,7 +3,7 @@
 
   "name": "QR-Code",
   "description": "Show a QR-Code for the current URL (without relying on some third-party API).",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "homepage_url": "https://github.com/fxkr/chrome-qrcode-extension",
   "icons": {
     "16": "icon-16x16.png",
