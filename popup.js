@@ -58,7 +58,11 @@ document.addEventListener("DOMContentLoaded", function () {
     this.select();
   };
 
-  chrome.tabs.getSelected(null, function(tab) {
+  chrome.tabs.query({
+    active: true,
+    lastFocusedWindow: true
+  }, function(tabs) {
+    var tab = tabs[0];
     document.getElementById("textbox").value = tab.url;
     document.getElementById("textbox").select();
     updateImage();

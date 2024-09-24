@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
 
   "name": "QR-Code",
   "description": "Show a QR-Code for the current URL (without relying on some third-party API).",
@@ -10,10 +10,15 @@
     "48": "icon-48x48.png",
     "128": "icon-128x128.png" },
 
-  "permissions": [ "tabs" ],
+  "permissions": [ "activeTab" ],
   "offline_enabled": true,
-  "browser_action": {
-    "default_icon": "icon-16x16.png",
+  "action": {
+    "default_icon": {
+       "16": "icon-16x16.png",
+       "48": "icon-48x48.png",
+       "128": "icon-128x128.png"
+    },
+    "default_title": "Generate QR-Code for this page",
     "default_popup": "popup.html"
   }
 }
